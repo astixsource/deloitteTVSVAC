@@ -57,7 +57,7 @@ jobs:
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'TVSStaging'
+          app-name: 'tvsmprod'
           slot-name: 'Production'
           package: ./
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_2A2497C940904D089CA4FAF70EBA0A5D }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_AF0DE25A29914858AD342165F3219C62 }}
