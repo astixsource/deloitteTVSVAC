@@ -22,7 +22,6 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "deloitteTVSVAC", ".", "{38E
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "54664"
 		SlnRelativePath = "..\deloitteTVSVAC\"
-		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
 Global
@@ -37,6 +36,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {4E7F7ED6-8ABB-4461-AF68-3BF4B6D45CE0}
+		SolutionGuid = {2FD4D88A-73DA-4D7B-B720-D2A8D662EDB6}
 	EndGlobalSection
 EndGlobal
