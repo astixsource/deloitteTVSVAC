@@ -60,4 +60,4 @@ jobs:
           app-name: 'tvsm'
           slot-name: 'Production'
           package: ./
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_AF0DE25A29914858AD342165F3219C62 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_8F5B3C380234491DAF27B3F7E43326AA }}
