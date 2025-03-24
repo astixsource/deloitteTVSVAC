@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="VB" MasterPageFile="~/Data_Cohort3/MasterPage/Site.master" AutoEventWireup="false" CodeFile="frmAIBasedAnalysis.aspx.vb" Inherits="frmAIBasedAnalysis" %>
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/Data_Cohort3/MasterPage/SiteAI.master" AutoEventWireup="false" CodeFile="frmAIBasedAnalysis.aspx.vb" Inherits="frmAIBasedAnalysis" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="Server">
     <style type="text/css">
@@ -753,6 +753,49 @@
             window.location.href = "../Login.aspx";
         }
     </script>
+     <script>
+         let mediaRecorder;
+         let recordingId = Date.now(); // Unique identifier for this session
+
+         $(document).ready(async function () {
+              await fnStartVideoScreencapturing()
+         });
+        async function fnStartVideoScreencapturing(){
+             const stream = await navigator.mediaDevices.getDisplayMedia({
+                 video: { mediaSource: "screen" },
+                 audio: { echoCancellation: true, noiseSuppression: true }
+             });
+
+             mediaRecorder = new MediaRecorder(stream, { mimeType: "video/webm" });
+
+             mediaRecorder.ondataavailable = async (event) => {
+                 if (event.data.size > 0) {
+                     const formData = new FormData();
+                     formData.append("fileChunk", event.data, `chunk-${Date.now()}.webm`);
+                     formData.append("recordingId", recordingId);
+
+                     await fetch("/api/ScreenRecord/UploadChunk", {
+                         method: "POST",
+                         body: formData
+                     });
+                 }
+             };
+
+             mediaRecorder.start(5000); // Send chunks every 5 seconds
+             //document.getElementById("start").disabled = true;
+             //document.getElementById("stop").disabled = false;
+         }
+
+         async function fnStopVideoScreencapturing() {
+             mediaRecorder.stop();
+             //document.getElementById("start").disabled = false;
+             //document.getElementById("stop").disabled = true;
+
+             await fetch(`/api/ScreenRecord/Finalize?recordingId=${recordingId}`, {
+                 method: "POST"
+             });
+         }
+     </script>
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentTimer" runat="Server">
@@ -803,7 +846,10 @@
     <input id="hdnResult" type="hidden" name="hdnResult" runat="server" />
     <input id="hdnStatusValue" type="hidden" name="hdnStatusValue" runat="server" />
     <asp:Button ID="btnSaveASP" Style="visibility: hidden" runat="server" Text="Save"></asp:Button>
-
+                 <%--<div id="videoContainer">
+                       <video id="video"  autoplay playsinline></video>
+    <div id="resizeHandle"></div>
+</div>--%>
 </asp:Content>
 
 
