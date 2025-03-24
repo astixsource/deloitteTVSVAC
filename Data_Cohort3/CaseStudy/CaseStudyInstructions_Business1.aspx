@@ -279,48 +279,28 @@
                     <h4 class="text-decoration-underline fw-bold">Background:</h4>
 
                     <p>
-                        Global Motors, an established automotive dealership with over 40 years of experience, has been facing 
-substantial challenges in its service department. While the company has always been known for its robust 
-sales operations, its service department has been underperforming for several years. Despite the overall 
-strong reputation of the dealership, customer satisfaction ratings for the service department consistently
-below industry standards, and the team is struggling with low morale.
+                       "Global Motors, an established automotive dealership with over 40 years of experience, has been facing substantial challenges in its service department. While the company has always been known for its robust sales operations, its service department has been underperforming for several years. 
                     </p>
 
                     <p>
-                        The service department is working with outdated systems, relying heavily on manual processes for 
-customer service tracking, appointment scheduling, and diagnostics. Many of the service technicians are 
-used to working with legacy systems and are reluctant to adopt any new tools, especially those that 
-require significant upskilling. The department has not yet transitioned to using digital platforms for 
-customer engagement, leading to communication gaps and slow response times. Additionally, there’s no 
-CRM system in place, and customer feedback is mainly captured through informal channels such as word-of-mouth or occasional surveys that do not capture comprehensive insights.
+                       The service department is working with outdated systems, relying heavily on manual processes for customer service tracking, appointment scheduling, and diagnostics. Many of the service technicians are used to working with legacy systems and are reluctant to adopt any new tools, especially those that require significant upskilling. The department has not yet transitioned to using digital platforms for customer engagement, leading to communication gaps and slow response times. Additionally, there’s no CRM system in place, and customer feedback is mainly captured through informal channels such as word-of-mouth or occasional surveys that do not capture comprehensive insights.
                     </p>
 
                     <p>
-                        While there has been some investment in digital tools in other parts of the dealership, the service team’s 
-resistance to adopting these tools has led to operational inefficiencies and stagnation. Technicians are 
-often overburdened, handling multiple tasks simultaneously, and without any structured process to 
-streamline their workflow. As a result, they frequently miss key details, leading to poor diagnostics and 
-delays in service delivery.
+                       While there has been some investment in digital tools in other parts of the dealership, the service team’s resistance to adopting these tools has led to operational inefficiencies and stagnation. Technicians are often overburdened, handling multiple tasks simultaneously, and without any structured process to streamline their workflow. As a result, they frequently miss key details, leading to poor diagnostics and delays in service delivery.
+
                     </p>
 
                     <p>
-                        Despite these challenges, there’s resistance within the management team to implement large-scale 
-changes. The senior management is hesitant to make drastic investments, fearing that they will not see 
-immediate returns. Instead, they are seeking cost-effective solutions that can incrementally improve 
-performance and drive profitability without disrupting the existing operations. The dealership is already 
-in the process of launching a new marketing campaign aimed at attracting customers to the service 
-department, but there’s little focus on improving internal operations to ensure that the service 
-department can handle the increase in demand.
+                       Despite these challenges, there’s resistance within the management team to implement large-scale changes. The senior management is hesitant to make drastic investments, fearing that they will not see immediate returns. Instead, they are seeking cost-effective solutions that can incrementally improve performance and drive profitability without disrupting the existing operations. The dealership is already in the process of launching a new marketing campaign aimed at attracting customers to the service department, but there’s little focus on improving internal operations to ensure that the service department can handle the increase in demand.
+
                     </p>
 
                     <p>
-                        In addition to these challenges, Global Motors has recently expanded its business into new locations. The 
-company is under pressure to maintain profitability across all locations while managing the complexities 
-of scaling up operations. The service department has been receiving increasing pressure from the 
-marketing department to ensure that customer experience and service delivery align with the growing 
-brand presence. At the same time, employees are feeling stretched and overwhelmed by the rapid pace 
-of change.
+                       In addition to these challenges, Global Motors has recently expanded its business into new locations. The company is under pressure to maintain profitability across all locations while managing the complexities of scaling up operations. The service department has been receiving increasing pressure from the marketing department to ensure that customer experience and service delivery align with the growing brand presence. At the same time, employees are feeling stretched and overwhelmed by the rapid pace of change.
                     </p>
+
+                    <p>Global Motors' financials further underscore the urgency of addressing these service department challenges. While the dealership's overall revenue remains strong, with annual sales contributing nearly 75% of total earnings, the service department has been operating at a significantly lower margin. In the past three years, service-related revenue has stagnated, contributing only 15% to the dealership’s overall profitability, compared to an industry benchmark of 25-30%. Additionally, customer retention rates for post-warranty service have declined by 12%, leading to lost revenue opportunities. The inefficiencies in service operations have also resulted in rising operational costs, with overtime expenses for technicians increasing by 20% due to workflow bottlenecks. With expansion efforts already straining financial resources, senior management is wary of further investments without clear, measurable returns, making it crucial to identify targeted, cost-effective solutions to enhance service efficiency and profitability."</p>
 
                      
                 </div>

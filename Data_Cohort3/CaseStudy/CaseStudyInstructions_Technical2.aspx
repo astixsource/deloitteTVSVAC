@@ -264,56 +264,28 @@
     </div>
 
                 <p>
-                    Gupta Auto, a 65-year-old dealership with a rich legacy, has been a trusted name in its region for 
-decades. Located in a thriving IT hub that has witnessed significant business growth in recent years, the 
-dealership should ideally be experiencing increased service volumes. However, Gupta Auto is grappling 
-with stagnation in service business for the past three years, leading to rising overhead costs and 
-declining profitability.
+                   "Gupta Auto, a 65-year-old dealership with a rich legacy, has been a trusted name in its region for decades. Located in a thriving IT hub that has witnessed significant business growth in recent years, the dealership should ideally be experiencing increased service volumes. However, Gupta Auto is grappling with stagnation in service business for the past three years, leading to rising overhead costs and declining profitability
                 </p>
 
                 <p><strong>Key Issues:</strong></p>
 
                 <ol>
-                    <li>Low Net Promoter Score (25): The dealership's Net Promoter Score (NPS) of 25 falls well below 
-the industry benchmark, highlighting dissatisfaction with the quality of service and overall 
-customer experience. Customers frequently complain about delays in service, lack of 
-responsiveness, and poor issue resolution, all of which contribute to declining customer loyalty.</li>
+                    <li>Low Net Promoter Score (NPS: 25) & Poor Service Experience: Gupta Auto’s NPS of 25 falls well below the industry benchmark, signaling dissatisfaction with service quality. Customers frequently complain about delays, lack of responsiveness, and poor issue resolution. Many issues stem from a lack of structured OEM-backed customer engagement models, limiting personalized service experiences.</li>
 
-                    <li>Poor Online Reputation (Google Rating: 3.0): Gupta Auto’s online presence has suffered, with a 
-Google rating of 3.0 out of 5. Negative reviews often criticize the dealership for long service 
-times, lack of communication, and inadequate customer support. In today's digital-driven world, 
-such a reputation severely hinders the dealership’s ability to attract new customers and grow its 
-business.
-                    </li>
-                    <li>Low Technical Support Efficiency (Rework Rate: 35%): Gupta Auto is facing a 35% rework rate in 
-service repairs due to unstructured technical assistance and troubleshooting procedures. The 
-lack of clear escalation protocols and expert guidance for complex issues has led to extended 
-service times, averaging 3.5 days beyond estimates, resulting in customer frustration and higher 
-service costs.
-                    </li>
-                    <li>Insufficient Skill Development & Training (Training Completion Rate: 40%): The dealership’s 
-service team is hindered by inadequate skill development programs, with only 40% of employees 
-completing technical and soft-skill training. This has led to extended service times and customer 
-complaints about poor communication and lack of technical proficiency.</li>
+                    <li>Poor Online Reputation (Google Rating: 3.0): The dealership's online reputation has taken a hit, with a Google rating of 3.0 out of 5. Negative reviews highlight long wait times, communication gaps, and inadequate service resolutions. Competing dealerships in the area have leveraged OEM-driven digital service initiatives, improving their online ratings and attracting more customers.</li>
 
-                    <li>Operational Inefficiencies & Poor Dealership Management (Service Backlog: 30%): Gupta Auto is 
-facing inefficiencies due to a lack of standardized processes. The service department has a 30% 
-backlog, with issues often carried over daily. The absence of performance management systems 
-has led to inconsistent service delivery, missed targets, and delayed customer commitments. 
-Additionally, low service bay utilization (60% vs. the industry standard of 85%) is further 
-exacerbating the problem.
-                    </li>
+                    <li>Low Technical Support Efficiency (Rework Rate: 35%): Only 40% of the service team has completed technical and soft-skill training, leading to gaps in product expertise and customer handling. While the OEM provides product training modules and certification programs, dealership engagement in these programs remains low.</li>
+
+                    <li>Skill Development & Training Gaps (Training Completion Rate: 40%): The service bay, which is crucial for vehicle repairs and maintenance, has low utilization rates. With an industry-standard ramp utilization target of 7.5 or more, the current rate of 4.5 shows that the technicians are underutilized, leading to inefficiencies and lower throughput. Lack of OEM-certified technicians affects first-time issue resolution, further straining service efficiency.</li>
+
+                    <li>Operational Inefficiencies & Poor Dealership Management (Service Backlog: 30%): The dealership faces a 30% backlog in service orders, with daily carryovers affecting workflow. Low service bay utilization (60% vs. the industry standard of 85%) indicates inefficiencies in resource allocation. Competing dealerships have benefited from OEM-driven workflow optimization models, yet Gupta Auto has not adopted these strategies effectively.</li>
                 </ol>
 
                 <p>
-                    These challenges have led to a stagnant service business, low customer satisfaction, and declining 
-profitability. Despite the potential for growth in the IT hub, Gupta Auto is struggling to meet customer 
-expectations, resulting in poor retention and a damaged reputation. The Territory Manager (TM) has 
-been called upon frequently to intervene, addressing both technical and service-related complaints 
-during visits.
+                    Gupta Auto’s low adoption of OEM-backed service innovations has led to missed opportunities for improved service efficiency, customer satisfaction, and profitability. The Territory Manager (TM) often has to intervene to resolve complaints, either by instructing the dealership staff over the phone or directly resolving issues during visits. During the latest TM visit, he had to handle two technical complaints related to vehicle performance and two soft service-related complaints regarding customer handling.
                 </p>
 
-                <p>The core challenge now lies in identifying the root causes behind these issues and implementing a targeted, effective strategy for improvement.</p>
+                <p>The challenge now is to identify the root causes behind these performance issues and address them in a systematic and effective manner."</p>
 
             </div>
         </div>

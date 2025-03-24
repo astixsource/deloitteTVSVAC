@@ -264,53 +264,26 @@
     </div>
                 <h4 class="text-decoration-underline fw-bold">Background:</h4>
 
-                <p>
-                    M/s Star Motors, an established TVS dealership in a medium-sized town, has experienced consistent 
-growth due to the town’s expanding economy and rising population. The town's increased economic 
-activity has led to a surge in demand for consumer goods, including automobiles, electronics, and other 
-consumer durables. As a result, new dealerships have been set up in the newly developed areas of the 
-town, increasing competition in the local market. Despite the favorable business environment, M/s Star 
-Motors has been facing a stagnation in service revenue over the past year. This issue has become more 
-pronounced as the dealership has been unable to capitalize on the growth in the town's population and 
-its expanding infrastructure.
-                </p>
+                <p>"M/s Star Motors, an established TVS dealership in a medium-sized town, has experienced consistent growth due to the town’s expanding economy and rising population. The town's increased economic activity has led to a surge in demand for consumer goods, including automobiles, electronics, and other consumer durables. As a result, new dealerships have been set up in the newly developed areas of the town, increasing competition in the local market. Despite the favorable business environment, M/s Star Motors has been facing a stagnation in service revenue over the past year. This issue has become more pronounced as the dealership has been unable to capitalize on the growth in the town's population and its expanding infrastructure.</p>
 
 
                 <p>
-                    While the sales department has continued to thrive, the service department has failed to see a similar 
-increase in revenue. One of the main challenges facing the service department is the reliance on outdated 
-systems and manual processes for service tracking, customer engagement, and diagnostics. These legacy 
-systems have resulted in operational inefficiencies, with slow response times and poor customer service, 
-which in turn have led to a decrease in customer satisfaction.
-                </p>
+                   While the sales department has continued to thrive, the service department has failed to see a similar increase in revenue. One of the main challenges facing the service department is the reliance on outdated systems and manual processes for service tracking, customer engagement, and diagnostics. These legacy systems have resulted in operational inefficiencies, with slow response times and poor customer service, which in turn have led to a decrease in customer satisfaction.
 
 
                 <p>
-                    Moreover, there is no CRM system in place, making it difficult to track customer interactions, manage 
-appointments, or capture valuable feedback. The service department has also struggled with employee 
-morale, as technicians are accustomed to working with older systems and have shown reluctance to adopt 
-new technologies, further exacerbating operational inefficiencies.
+                    Moreover, there is no CRM system in place, making it difficult to track customer interactions, manage appointments, or capture valuable feedback. The service department has also struggled with employee morale, as technicians are accustomed to working with older systems and have shown reluctance to adopt new technologies, further exacerbating operational inefficiencies.
                 </p>
 
                 <p>
-                    The town’s rapid expansion has led to a rise in competition, with new service centers opening up, offering 
-faster and more efficient services. This has increased the pressure on M/s Star Motors to improve service 
-delivery and meet the heightened customer expectations. However, despite these challenges, the 
-management team has been hesitant to make large-scale investments in the service department, 
-preferring instead to seek cost-effective, incremental changes that will improve performance without 
-disrupting operations. There has also been a lack of coordination between the sales and service 
-departments, causing gaps in customer service and limiting opportunities for cross-selling and after-sales 
-service. Additionally, while marketing campaigns have been launched to attract more customers to the 
-service department, the service team has not been adequately prepared to handle the increase in 
-demand.
+                    The town’s rapid expansion has led to a rise in competition, with new service centers opening up, offering faster and more efficient services. This has increased the pressure on M/s Star Motors to improve service delivery and meet the heightened customer expectations. However, despite these challenges, the management team has been hesitant to make large-scale investments in the service department, preferring instead to seek cost-effective, incremental changes that will improve performance without disrupting operations. There has also been a lack of coordination between the sales and service departments, causing gaps in customer service and limiting opportunities for cross-selling and after-sales service. Additionally, while marketing campaigns have been launched to attract more customers to the service department, the service team has not been adequately prepared to handle the increase in demand.
                 </p>
 
                 <p>
-                    Given these challenges, M/s Star Motors is under pressure to improve the performance of its service 
-department, especially as it faces increased competition and the need to align its service offerings with 
-the growing town population. 
-You have been tasked with improving the service department’s performance, your role is to develop an 
-actionable plan to address the given issues.
+                    Given these challenges, M/s Star Motors is under pressure to improve the performance of its service department, especially as it faces increased competition and the need to align its service offerings with the growing town population.  
+You have been tasked with improving the service department’s performance, your role is to develop an actionable plan to address the given issues.
+M/s Star Motors' financial data highlights the pressing need to revamp its service department to remain competitive in the growing local market. While vehicle sales continue to contribute nearly 80% of total dealership revenue, service-related earnings have stagnated, accounting for only 18% of overall profitability—falling short of the industry benchmark of 25-30%. Over the past year, post-warranty customer retention rates have declined by 10%, leading to a significant loss of recurring revenue opportunities. Additionally, inefficiencies caused by outdated service tracking systems and manual processes have increased operational costs, with technician overtime expenses rising by 15% due to scheduling and workflow inefficiencies. The lack of a centralized CRM system has further compounded challenges, resulting in missed follow-ups, inconsistent customer engagement, and lower service conversions. As new competitors enter the market, offering faster and more technologically advanced service options, M/s Star Motors faces mounting pressure to enhance its service delivery. However, with financial resources prioritized for dealership expansion and sales growth, senior management is reluctant to approve large-scale investments without clear, data-driven projections on return on investment (ROI). This makes it imperative to identify targeted, cost-effective solutions that improve operational efficiency, enhance customer retention, and drive service department profitability."
+
                 </p>
 
 

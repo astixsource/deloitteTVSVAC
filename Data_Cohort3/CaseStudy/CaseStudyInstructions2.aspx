@@ -254,10 +254,7 @@
                         <div class="title-line-center"></div>
                     </div>
                     <p>
-                        In the following case study, you will be presented with a scenario related to a fictitious organization. Your 
-task is to read through the case study carefully, paying attention to the challenges faced by the 
-organization. Based on the details provided in the case study, you will be asked to select the most 
-appropriate course of action for addressing the identified issues.
+                        In the following case study, you will be presented with a scenario related to a fictitious organization. Your task is to read through the case study carefully, paying attention to the challenges faced by the organization. Based on the details provided in the case study, you will be asked questions and you need to select the most appropriate course of action from the options provided. Justify your selection by providing a brief explanation (50–75 words) on why you believe your chosen approach would be the most effective.
                     </p>
                     
                 </div>

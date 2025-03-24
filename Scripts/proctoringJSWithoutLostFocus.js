@@ -1,14 +1,17 @@
 ﻿var cntLost = 0;
 document.addEventListener("visibilitychange", function () {
-    if (document.hidden) {
-        if (cntLost == 0) {
-            cntLost = 1;
-            console.log("User switched tab or minimized browser");
-            fnShowDialogAlertMain("Tab switched or window minimized", "You have switched tab! You will be logged out.");
+    var IsProctoringEnabled = $("#ConatntMatter_hdnIsProctoringEnabled").val();
+    if (IsProctoringEnabled == 1) {
+        if (document.hidden) {
+            if (cntLost == 0) {
+                cntLost = 1;
+                console.log("User switched tab or minimized browser");
+                fnShowDialogAlertMain("Tab switched or window minimized", "You have switched tab! You will be logged out.");
+            }
+            // Send an alert or log this event
+        } else {
+            console.log("User is back on the tab");
         }
-        // Send an alert or log this event
-    } else {
-        console.log("User is back on the tab");
     }
 });
 function fnShowDialogAlertMain(ViolationText, displaymsg) {

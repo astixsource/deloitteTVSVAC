@@ -274,17 +274,11 @@ from <strong>non-core service offerings,</strong> such as Annual Maintenance Con
                 </p>
 
                 <p>
-                    The lack of focus on non-core services is evident in both customer engagement and staff performance 
-metrics. Customers are often unaware of the benefits of these offerings, and dealership staff lack the 
-skills and motivation to promote them effectively. Furthermore, digital tools and data-driven 
-approaches that could improve efficiency and marketing effectiveness are underutilized.
+                    The lack of focus on non-core services is evident in both customer engagement and staff performance metrics. Customers are often unaware of the benefits of these offerings, and dealership staff lack the skills and motivation to promote them effectively. Furthermore, digital tools and data-driven approaches that could improve efficiency and marketing effectiveness are underutilized.
                 </p>
 
                 <p>
-                    As the Territory Manager (TM), you are tasked with addressing these challenges and creating a 
-comprehensive plan to increase non-core service revenue while maintaining high customer satisfaction. 
-This requires you to focus on improving customer experience, building staff capabilities, leveraging 
-digital tools, and demonstrating commercial acumen to ensure sustainable profitability.
+                   As the Territory Manager (TM), you are tasked with addressing these challenges and creating a comprehensive plan to increase non-core service revenue while maintaining high customer satisfaction. This requires you to focus on improving customer experience, building staff capabilities, leveraging digital tools, and demonstrating commercial acumen to ensure sustainable profitability.
                 </p>
 
                 <p>Your plan must address:</p>
@@ -295,6 +289,19 @@ digital tools, and demonstrating commercial acumen to ensure sustainable profita
                     <li>Driving adoption of non-core services among customers through effective communication and marketing.</li>
                     <li>Equipping the dealership team with the necessary skills and tools to deliver results.</li>
                 </ol>
+
+                <p>Your plan must address:</p>
+                <ul>
+                    <li>Current service volume: 1,200 vehicles serviced per month</li>
+                    <li>Existing non-core service revenue contribution: 5% of total service revenue</li>
+                    <li>Industry benchmark for non-core service revenue contribution: 15%</li>
+                    <li>Current AMC penetration rate: 8%</li>
+                    <li>Current RSA enrollment rate: 6%</li>
+                    <li>Extended warranty uptake: 10%</li>
+                    <li>Target for non-core service revenue contribution: 12% in the next six months</li>
+                    <li>Customer feedback survey: 60% of customers unaware of AMC and RSA benefits</li>
+                    <li>Staff training participation: Only 30% have attended formal training on upselling non-core services"</li>
+                </ul>
 
             </div>
         </div>

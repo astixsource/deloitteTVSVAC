@@ -216,11 +216,11 @@ Partial Class CaseStudy
                 strTable.Append("<textarea flg='1'  " & strDisabled & " id='txt_" & dr.Item("RspExcerciseQstnID") & "' QuesId='" & dr.Item("RspExcerciseQstnID") & "' RspDetId='" & dr.Item("RspDetID") & "' rows='7' placeholder='Write your response here' class='form-control' style='width:100%;border:1px solid #ccc;'>" + dr.Item("Answrval").ToString() + "</textarea>")
             Else
                 strTable.Append(fnGetSubStatement(dr.Item("RspExcerciseQstnID"), Convert.ToString(dr.Item("Answrval")).Split("|")(0), dr.Item("RspDetID"), 4, dr.Item("TypeID"), dr.Item("MaxQstnSelected"), dr.Item("SrlNmbr"), strDisabled))
-                'If (Convert.ToString(dr.Item("Answrval")) <> "") Then
-                '    strTable.Append("<div class='mt-1 mb-1'><b>Rational : </b></div><div><textarea  " & strDisabled & " id='txt_" & dr.Item("RspExcerciseQstnID") & "' flg='2' QuesId='" & dr.Item("RspExcerciseQstnID") & "' RspDetId='" & dr.Item("RspDetID") & "' rows='4' placeholder='Write your response here' class='form-control' style='width:100%;border:1px solid #ccc;'>" + HttpUtility.UrlDecode(Convert.ToString(dr.Item("Answrval")).Split("|")(1)) + "</textarea></div>")
-                'Else
-                '    strTable.Append("<div class='mt-1 mb-1'><b>Rational : </b></div><div><textarea  " & strDisabled & " id='txt_" & dr.Item("RspExcerciseQstnID") & "' flg='2' QuesId='" & dr.Item("RspExcerciseQstnID") & "' RspDetId='" & dr.Item("RspDetID") & "' rows='4' placeholder='Write your response here' class='form-control' style='width:100%;border:1px solid #ccc;'></textarea></div>")
-                'End If
+                If (Convert.ToString(dr.Item("Answrval")) <> "") Then
+                    strTable.Append("<div class='mt-1 mb-1'><b>Rational : </b></div><div><textarea  " & strDisabled & " id='txt_" & dr.Item("RspExcerciseQstnID") & "' flg='2' QuesId='" & dr.Item("RspExcerciseQstnID") & "' RspDetId='" & dr.Item("RspDetID") & "' rows='4' placeholder='Write your response here' class='form-control' style='width:100%;border:1px solid #ccc;'>" + HttpUtility.UrlDecode(Convert.ToString(dr.Item("Answrval")).Split("|")(1)) + "</textarea></div>")
+                Else
+                    strTable.Append("<div class='mt-1 mb-1'><b>Rational : </b></div><div><textarea  " & strDisabled & " id='txt_" & dr.Item("RspExcerciseQstnID") & "' flg='2' QuesId='" & dr.Item("RspExcerciseQstnID") & "' RspDetId='" & dr.Item("RspDetID") & "' rows='4' placeholder='Write your response here' class='form-control' style='width:100%;border:1px solid #ccc;'></textarea></div>")
+                End If
 
             End If
             strTable.Append("</div></div></div>")

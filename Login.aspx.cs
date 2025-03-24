@@ -193,7 +193,7 @@ public partial class Login : System.Web.UI.Page
                         flgConfirmation = Convert.ToInt32(drdr["flgConfirmation"].ToString());
                         Session["flgConfirmation"] = flgConfirmation;
                         Session["flgUserType"] = drdr["flgUserType"].ToString();
-                        Session["IsProctoringEnabled"] = drdr["IsProctoringEnabled"].ToString();
+                        Session["IsProctoringEnabled"] = "0";// drdr["IsProctoringEnabled"].ToString();
                         Session["IsSelfieTaken"] = drdr["IsSelfieTaken"].ToString();
 
                         flgUserType = Convert.ToInt32(drdr["flgUserType"]);

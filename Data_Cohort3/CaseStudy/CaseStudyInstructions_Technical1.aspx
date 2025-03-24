@@ -264,51 +264,29 @@
     </div>
 
                 <p>
-                    Naren TVS has been a trusted partner of TVS for over 10 years. The dealership operates in a highly 
-competitive market and serves a wide range of customers, including first-time buyers, repeat customers, 
-and fleet accounts. Over the years, the dealership has faced several challenges that have had a 
-significant impact on its performance, customer satisfaction, and overall service metrics.
+                    "Naren TVS has been a trusted partner of TVS for over 10 years. The dealership operates in a highly competitive market and serves a wide range of customers, including first-time buyers, repeat customers, and fleet accounts. Over the years, the dealership has faced several challenges that have had a significant impact on its performance, customer satisfaction, and overall service metrics.
                 </p>
 
 
                 <p><strong>Key Issues:</strong></p>
 
                 <ol>
-                    <li><strong>Low Vehicle Performance Satisfaction:</strong> A critical issue is the consistently low customer 
-satisfaction ratings regarding vehicle performance. Customers are often dissatisfied with the 
-vehicle's initial performance, and many complaints are related to issues such as poor handling, 
-engine performance, and system failures. The dealership struggles with a low first-time right 
-ratio, meaning that most repairs are done incorrectly the first time, leading to rework and 
-repeated complaints.</li>
+                    <li><strong>Low Vehicle Performance Satisfaction:</strong> A critical issue is the consistently low customer satisfaction ratings regarding vehicle performance. Customers are often dissatisfied with the vehicle's initial performance, and many complaints are related to issues such as poor handling, engine performance, and system failures. The dealership struggles with a low first-time right ratio, meaning that most repairs are done incorrectly the first time, leading to rework and repeated complaints.</li>
 
-                    <li><strong>Low Customer Dissatisfaction Recovery (25%):</strong> Despite addressing some customer complaints, 
-the dealership’s recovery rate remains low. Customers often feel that their complaints are not 
-resolved adequately, and the dealership lacks the infrastructure and processes required for 
-efficient issue resolution.
-                    </li>
-                    <li><strong>High Carry Forward Ratio (45%):</strong> The high carry-forward ratio indicates that a significant 
-percentage of the service workload, including unresolved issues, is being carried over to the 
-next day or week. This backlogs the system, causing further delays and customer dissatisfaction.</li>
-                    <li><strong>Low Ramp Utilization (4.5):</strong>  The service bay, which is crucial for vehicle repairs and maintenance, 
-has low utilization rates. With an industry-standard ramp utilization target of 7.5 or more, the 
-current rate of 4.5 shows that the technicians are underutilized, leading to inefficiencies and 
-lower throughput.</li>
-                    <li><strong>High CC/10K (200-250):</strong> The number of customer complaints per 10,000 vehicles serviced is 
-higher than expected. This points to deeper issues with service delivery, customer handling, and 
-the overall service culture at the dealership.
-                    </li>
+                    <li><strong>Low Customer Dissatisfaction Recovery (25%):</strong> Despite addressing some customer complaints, the dealership’s recovery rate remains low. Customers often feel that their complaints are not resolved adequately, and the dealership lacks the infrastructure and processes required for efficient issue resolution.</li>
+
+                    <li><strong>High Carry Forward Ratio (45%):</strong> The high carry-forward ratio indicates that a significant percentage of the service workload, including unresolved issues, is being carried over to the next day or week. This backlogs the system, causing further delays and customer dissatisfaction.</li>
+                    <li><strong>Low Ramp Utilization (4.5):</strong> The service bay, which is crucial for vehicle repairs and maintenance, has low utilization rates. With an industry-standard ramp utilization target of 7.5 or more, the current rate of 4.5 shows that the technicians are underutilized, leading to inefficiencies and lower throughput.</li>
+                    <li><strong>High CC/10K (200-250):</strong> The number of customer complaints per 10,000 vehicles serviced is higher than expected. This points to deeper issues with service delivery, customer handling, and the overall service culture at the dealership.</li>
                 </ol>
 
                 <p>
-                    These issues have contributed to a low Net Promoter Score (NPS) and a high volume of customer 
-complaints. The Territory Manager (TM) often has to intervene to resolve complaints, either by 
-instructing the dealership staff over the phone or directly resolving issues during visits. During the latest 
-TM visit, he had to handle two technical complaints related to vehicle performance and two soft servicerelated complaints regarding customer handling.
+                    These issues have contributed to a low Net Promoter Score (NPS) and a high volume of customer complaints. The Territory Manager (TM) often has to intervene to resolve complaints, either by instructing the dealership staff over the phone or directly resolving issues during visits. During the latest TM visit, he had to handle two technical complaints related to vehicle performance and two soft service-related complaints regarding customer handling.
+
                 </p>
 
                 <p>
-                    The challenge now is to identify the root causes behind these performance issues and address them in a 
-systematic and effective manner.
+                    The challenge now is to identify the root causes behind these performance issues and address them in a systematic and effective manner."
                 </p>
 
 

@@ -288,19 +288,20 @@ function snapshot() {
 }
 var eventVoilationCountTimer;
 $(document).ready(async function () {
-    $("#videoContainer").draggable();
-    video = document.getElementById("video");
-    statusText = document.getElementById("status");
-    canvas = document.getElementById("myCanvas");
-    ctx = canvas.getContext("2d");
-
+    
     var IsProctoringEnabled = $("#ConatntMatter_hdnIsProctoringEnabled").val();
     if (IsProctoringEnabled == 1) {
+        $("#videoContainer").draggable();
+        video = document.getElementById("video");
+        statusText = document.getElementById("status");
+        canvas = document.getElementById("myCanvas");
+        ctx = canvas.getContext("2d");
+
         await startWebcam().then(() => {
             detectFaces();
             detectEyeGaze();
             detectHeadPose();
-           // detectVoice();
+            // detectVoice();
             setTimeout(function () {
                 snapshot();
             }, 5000);
@@ -309,35 +310,35 @@ $(document).ready(async function () {
             }, 60000);
         });
 
-       //eventVoilationCountTimer=setInterval(function () {
-       //    if (VoilationCount > 10) {
-       //         IsAllowcontinue = 1;
-       //         window.clearInterval(eventVoilationCountTimer);
-       //         clearTimeout(eventVoilationCountTimer);
-       //         var msg=("Your account has been locked due to violation more than " + VoilationCount + " during the assessment. Please contact support to regain access.");
-       //         document.title = msg;
-       //         fnSaveViolationDB(msg);
-       //         $("#dvDialogalert").html("<br>" + msg);
-       //         $("#dvDialogalert").dialog({
-       //             title: "Warning",
-       //             modal: true,
-       //             close: function () {
-       //                 $(this).html("");
-       //                 $(this).dialog("destroy");
-       //             },
-       //             buttons: {
-       //                 "OK": function () {
-       //                     document.title = "Assessment";
-       //                     $(this).dialog("close");
-                            
-       //                     window.location.href = "../../Login.aspx";
-       //                 }
-       //             }
-       //         });
-       //         return false;
-       //     }
-       // }, 1000);
-        
+        //eventVoilationCountTimer=setInterval(function () {
+        //    if (VoilationCount > 10) {
+        //         IsAllowcontinue = 1;
+        //         window.clearInterval(eventVoilationCountTimer);
+        //         clearTimeout(eventVoilationCountTimer);
+        //         var msg=("Your account has been locked due to violation more than " + VoilationCount + " during the assessment. Please contact support to regain access.");
+        //         document.title = msg;
+        //         fnSaveViolationDB(msg);
+        //         $("#dvDialogalert").html("<br>" + msg);
+        //         $("#dvDialogalert").dialog({
+        //             title: "Warning",
+        //             modal: true,
+        //             close: function () {
+        //                 $(this).html("");
+        //                 $(this).dialog("destroy");
+        //             },
+        //             buttons: {
+        //                 "OK": function () {
+        //                     document.title = "Assessment";
+        //                     $(this).dialog("close");
+
+        //                     window.location.href = "../../Login.aspx";
+        //                 }
+        //             }
+        //         });
+        //         return false;
+        //     }
+        // }, 1000);
+
 
         /*
         startWebcam();
@@ -351,6 +352,9 @@ $(document).ready(async function () {
 
         
         */
+    }
+    else {
+        $("#videoContainer").hide();
     }
 });
 

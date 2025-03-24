@@ -3,7 +3,7 @@ Imports System.Data.SqlClient
 Imports System.Text
 Imports Newtonsoft.Json
 
-Partial Class CaseStudy
+Partial Class frmAIBasedAnalysis
     Inherits System.Web.UI.Page
     Dim objAdo As New clsConnection.clsConnection(Convert.ToString(HttpContext.Current.Application("DbConnectionString")))
     Dim ExerciseID As Integer = 0
@@ -106,15 +106,16 @@ Partial Class CaseStudy
                 hdnTimeLeft.Value = Convert.ToString(TimeAllotedSec)
             End If
 
-            Dim strReturnTable As String = fnGetStatement(hdnRSPExerciseID.Value, hdnExerciseID.Value, hdnPageNmbr.Value, hdnExerciseStatus.Value, hdnTotalQuestions.Value, BandID)
+            'Dim strReturnTable As String = fnGetStatement(hdnRSPExerciseID.Value, hdnExerciseID.Value, hdnPageNmbr.Value, hdnExerciseStatus.Value, hdnTotalQuestions.Value, BandID)
 
-            dvMain.InnerHtml = strReturnTable.Split("@")(1)
+            'dvMain.InnerHtml = strReturnTable.Split("|@|")(1)
 
         End If
 
 
 
     End Sub
+
     <System.Web.Services.WebMethod()>
     Public Shared Function fnGetStatement(ByVal RspExcersiseID As Integer, ByVal ExerciseID As Integer, ByVal PGNmbr As Integer, ByVal ExerciseStatusId As Integer, ByVal TotalPageNumber As String, ByVal BandID As String) As String
         Dim strVal1 As Int16 = 0
@@ -177,7 +178,7 @@ Partial Class CaseStudy
             Else
                 ' If (Not String.IsNullOrWhiteSpace(dr.Item("Qstn"))) Then
                 If flgMainHdng = 0 Then
-                    strTable.Append("<p class='font-weight-bold'>" & dr.Item("MainHeading") & "</p>")
+                    strTable.Append("<p class='font-weight-bold'><b>" & dr.Item("MainHeading") & "</b></p>")
                     ' strTable.Append("<video id='video' width='500' height='300'  controls controlsList='nodownload'><source src='" & dr.Item("VideoURL") & "' type='video/mp4'></video>")
                     flgMainHdng = 1
                 End If
@@ -197,7 +198,7 @@ Partial Class CaseStudy
                 strTable.Append("")
                 strTable.Append("</span></div>")
             End If
-            strTable.Append("<div class='col-11'><p>")
+            strTable.Append("<div class='col-11' style='font-size:13.5pt'><p>")
             strTable.Append(dr.Item("Qstn"))
             strTable.Append("</p></div>")
             strTable.Append("</div>")
@@ -216,11 +217,11 @@ Partial Class CaseStudy
                 strTable.Append("<textarea flg='1'  " & strDisabled & " id='txt_" & dr.Item("RspExcerciseQstnID") & "' QuesId='" & dr.Item("RspExcerciseQstnID") & "' RspDetId='" & dr.Item("RspDetID") & "' rows='7' placeholder='Write your response here' class='form-control' style='width:100%;border:1px solid #ccc;'>" + dr.Item("Answrval").ToString() + "</textarea>")
             Else
                 strTable.Append(fnGetSubStatement(dr.Item("RspExcerciseQstnID"), Convert.ToString(dr.Item("Answrval")).Split("|")(0), dr.Item("RspDetID"), 4, dr.Item("TypeID"), dr.Item("MaxQstnSelected"), dr.Item("SrlNmbr"), strDisabled))
-                If (Convert.ToString(dr.Item("Answrval")) <> "") Then
-                    strTable.Append("<div class='mt-1 mb-1'><b>Rational : </b></div><div><textarea  " & strDisabled & " id='txt_" & dr.Item("RspExcerciseQstnID") & "' flg='2' QuesId='" & dr.Item("RspExcerciseQstnID") & "' RspDetId='" & dr.Item("RspDetID") & "' rows='4' placeholder='Write your response here' class='form-control' style='width:100%;border:1px solid #ccc;'>" + HttpUtility.UrlDecode(Convert.ToString(dr.Item("Answrval")).Split("|")(1)) + "</textarea></div>")
-                Else
-                    strTable.Append("<div class='mt-1 mb-1'><b>Rational : </b></div><div><textarea  " & strDisabled & " id='txt_" & dr.Item("RspExcerciseQstnID") & "' flg='2' QuesId='" & dr.Item("RspExcerciseQstnID") & "' RspDetId='" & dr.Item("RspDetID") & "' rows='4' placeholder='Write your response here' class='form-control' style='width:100%;border:1px solid #ccc;'></textarea></div>")
-                End If
+                'If (Convert.ToString(dr.Item("Answrval")) <> "") Then
+                '    strTable.Append("<div class='mt-1 mb-1'><b>Rational : </b></div><div><textarea  " & strDisabled & " id='txt_" & dr.Item("RspExcerciseQstnID") & "' flg='2' QuesId='" & dr.Item("RspExcerciseQstnID") & "' RspDetId='" & dr.Item("RspDetID") & "' rows='4' placeholder='Write your response here' class='form-control' style='width:100%;border:1px solid #ccc;'>" + HttpUtility.UrlDecode(Convert.ToString(dr.Item("Answrval")).Split("|")(1)) + "</textarea></div>")
+                'Else
+                '    strTable.Append("<div class='mt-1 mb-1'><b>Rational : </b></div><div><textarea  " & strDisabled & " id='txt_" & dr.Item("RspExcerciseQstnID") & "' flg='2' QuesId='" & dr.Item("RspExcerciseQstnID") & "' RspDetId='" & dr.Item("RspDetID") & "' rows='4' placeholder='Write your response here' class='form-control' style='width:100%;border:1px solid #ccc;'></textarea></div>")
+                'End If
 
             End If
             strTable.Append("</div></div></div>")
@@ -230,7 +231,7 @@ Partial Class CaseStudy
         End While
         strTable.Append("</div>")
         dr.Close()
-        strReturnVal = "1@" & strTable.ToString
+        strReturnVal = "1|@|" & strTable.ToString
 
         Return strReturnVal
 

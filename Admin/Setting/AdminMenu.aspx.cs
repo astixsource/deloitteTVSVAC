@@ -26,8 +26,8 @@ public partial class Admin_Setting_AdminMenu :  System.Web.UI.Page
             hdnLogin.Value = Session["LoginId"].ToString();
             if (RoleId == "6")
             {
-                divStartOrientationMeeting.Style.Add("display", "block");
-                divManageProcess.Style.Add("display", "none");
+               // divStartOrientationMeeting.Style.Add("display", "block");
+                //divManageProcess.Style.Add("display", "none");
             }
         }
     }

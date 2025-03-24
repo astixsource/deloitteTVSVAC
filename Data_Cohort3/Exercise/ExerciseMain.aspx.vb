@@ -130,6 +130,12 @@ Partial Class Set3_Main_frmExerciseMain_New
                     bgImage = "../../Images/icoCaseStudy.png"
                 ElseIf ExerciseID = 13 Then
                     bgImage = "../../Images/icoTechnicalAssessment.png"
+                ElseIf ExerciseID = 15 Then
+                    bgImage = "../../Images/SelfAssessment.jpg"
+                ElseIf ExerciseID = 16 Then
+                    bgImage = "../../Images/AIBasedVideoAnalysis.jpg"
+                ElseIf ExerciseID = 17 Then
+                    bgImage = "../../Images/RoleBasedDiscussion.jpg"
                 Else
                     bgImage = "../../Images/icoManagerAssessment.png"
                 End If
@@ -148,7 +154,7 @@ Partial Class Set3_Main_frmExerciseMain_New
                 strTable.Append(row.Item("txtStatus"))
                 strTable.Append("</td>")
                 strTable.Append("</tr>")
-                If ExerciseID <> 14 Then
+                If ExerciseID <> 14 And ExerciseID <> 15 Then
                     strTable.Append("<tr>")
                     strTable.Append("<td><b>Total Time</b> :</td>")
                     strTable.Append("<td>")

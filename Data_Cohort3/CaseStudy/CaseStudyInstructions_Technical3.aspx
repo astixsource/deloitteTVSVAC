@@ -278,11 +278,11 @@ satisfaction while ensuring profitability and operational excellence.
                 <p>In the first six months, the focus should be on:</p>
 
                 <ol>
-                    <li>Building a skilled and motivated team capable of delivering outstanding customer service.</li>
-                    <li>Establishing robust technical processes to ensure minimal warranty complaints and effective resolution of service issues.</li>
-                    <li>Enhancing customer experience by creating delight moments and building strong relationships with customers, especially fleet operators.</li>
-                    <li>Planning and executing service campaigns to attract and retain customers.</li>
-                    <li>Supporting the dealer in creating a strong operational foundation that can sustain long-term success.</li>
+                    <li>Building a skilled and motivated team capable of delivering outstanding customer service. OEM-certified service advisors and technicians, OEM-supported training programs are not fully utilized currently.</li>
+                    <li>Establishing robust technical processes to ensure minimal warranty complaints and effective resolution of service issues. Warranty claim rejections have been increasing due to improper documentation and lack of adherence to OEM guidelines.</li>
+                    <li>Enhancing customer experience by creating delight moments and building strong relationships with customers, especially fleet operators. Customer retention rates are below the industry benchmark due to inconsistent post-service follow-ups.</li>
+                    <li>Planning and executing service campaigns to attract and retain customers. Digital marketing support from the OEM is available but underutilized.</li>
+                    <li>Supporting the dealer in creating a strong operational foundation that can sustain long-term success. OEM-mandated dealership profitability tracking tools are not fully implemented".</li>
                 </ol>
 
             </div>

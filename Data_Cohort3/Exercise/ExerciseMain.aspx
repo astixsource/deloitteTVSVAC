@@ -142,6 +142,15 @@
             else if (ExerciseID == 14) {
                 window.location.href = "../../Admin/Evidence/frmManagerAssessmentBackground.aspx";
             }
+            else if (ExerciseID == 15) {
+                window.location.href = "../../Admin/Evidence/frmSelfAssessmentInstruction.aspx?MenuId=6" + "&RspID=" + RspID + "&ExerciseID=" + ExerciseID + "&ExerciseType=" + ExerciseType + "&TotalTime=" + TotalTime + "&intLoginID=" + LoginID
+            }
+            else if (ExerciseID == 16) {
+                window.location.href = "../AIBasedVideoAnalysis/frmInstructions.aspx?MenuId=6" + "&RspID=" + RspID + "&ExerciseID=" + ExerciseID + "&ExerciseType=" + ExerciseType + "&TotalTime=" + TotalTime + "&intLoginID=" + LoginID
+            }
+            else if (ExerciseID == 17) {
+                window.location.href = "../GroupDiscussion/frmInstructions.aspx?MenuId=6" + "&RspID=" + RspID + "&ExerciseID=" + ExerciseID + "&ExerciseType=" + ExerciseType + "&TotalTime=" + TotalTime + "&intLoginID=" + LoginID
+            }
         }
     </script>
     <script type="text/javascript">

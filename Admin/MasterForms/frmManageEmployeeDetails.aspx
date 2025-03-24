@@ -750,7 +750,7 @@
                 <asp:TextBox ID="txtEmailID" runat="server" CssClass="form-control"></asp:TextBox>
             </div>
              <div class="form-group col-md-6" id="GradeBlock">
-                <label>Grade Type</label>
+                <label>Role Type</label>
                 <asp:DropDownList ID="ddlGrade" runat="server" CssClass="form-control">
                 </asp:DropDownList>
             </div>
