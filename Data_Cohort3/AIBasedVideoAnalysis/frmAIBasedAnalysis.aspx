@@ -756,43 +756,255 @@
      <script>
          let mediaRecorder;
          let recordingId = Date.now(); // Unique identifier for this session
-
-         $(document).ready(async function () {
-              await fnStartVideoScreencapturing()
-         });
-        async function fnStartVideoScreencapturing(){
-             const stream = await navigator.mediaDevices.getDisplayMedia({
-                 video: { mediaSource: "screen" },
-                 audio: { echoCancellation: true, noiseSuppression: true }
-             });
-
-             mediaRecorder = new MediaRecorder(stream, { mimeType: "video/webm" });
-
-             mediaRecorder.ondataavailable = async (event) => {
-                 if (event.data.size > 0) {
-                     const formData = new FormData();
-                     formData.append("fileChunk", event.data, `chunk-${Date.now()}.webm`);
-                     formData.append("recordingId", recordingId);
-
-                     await fetch("/api/ScreenRecord/UploadChunk", {
-                         method: "POST",
-                         body: formData
-                     });
+         let checkAllPermissions = async () => {
+             const cameraStatus = await navigator.permissions.query({ name: "camera" });
+             const micStatus = await navigator.permissions.query({ name: "microphone" });
+             const screenStatus = await navigator.permissions.query({ name: "screen" });
+             document.getElementById("cameraStatus").textContent = cameraStatus.state;
+             document.getElementById("micStatus").textContent = micStatus.state;
+             document.getElementById("screenStatus").textContent = screenStatus.state;
+         };
+         let checkPermissions = async () => {
+             const cameraStatus = await navigator.permissions.query({ name: "camera" });
+             const micStatus = await navigator.permissions.query({ name: "microphone" });
+             const screenStatus = await navigator.permissions.query({ name: "screen" });
+             
+             if (cameraStatus.state === "denied" || micStatus.state === "denied" || screenStatus.state === "denied") {
+                 alert("Please enable camera, microphone and screen sharing permissions to start recording.");
+             } else {
+                 fnStartVideoScreencapturing();
+             }
+         };
+         // Manually monitor screen sharing (since it's not available in Permissions API)
+         let monitorScreenSharing = () => {
+             let checkScreen = setInterval(() => {
+                 if (!screenStreamt) {
+                     alert("Screen sharing was stopped! Assessment will be terminated.");
+                     $("#screenStatus").html("Screen sharing is not allowed");
+                     $("#divDevicePermissions").show();
+                     stopRecording();
+                     clearInterval(checkScreen);
                  }
-             };
+             }, 3000); // Check every 3 seconds
+         };
 
-             mediaRecorder.start(5000); // Send chunks every 5 seconds
-             //document.getElementById("start").disabled = true;
-             //document.getElementById("stop").disabled = false;
+         // Function to stop recording (Define this function in your existing recording script)
+         let stopRecording = () => {
+             if (mediaRecorder && mediaRecorder.state !== "inactive") {
+                 mediaRecorder.stop();
+             }
+             //alert("Recording stopped due to revoked permissions.");
+         };
+
+
+         let isWebcamActive = false;
+         let isScreenSharingActive = false;
+         let checkInterval;
+
+         async function startMonitoring() {
+             // Start webcam & screen check in the background
+             checkInterval = setInterval(async () => {
+                 await checkWebcam();
+                 
+             }, 3000); // Check every 3 seconds
          }
+
+         // **Check if Webcam is Active**
+         async function checkWebcam() {
+             try {
+                 const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+                 if (stream.active) {
+                     isWebcamActive = true;
+                 } else {
+                     isWebcamActive = false;
+                     fnShowDialog("Webcam access has been lost. Please re-enable it!");
+                 }
+                 stopStream(stream); // Stop after checking
+             } catch (error) {
+                 isWebcamActive = false;
+                 fnShowDialog("Webcam access has been revoked! Exam will be terminated.");
+             }
+         }
+
+         // **Check if Screen Sharing is Active**
+         async function checkScreenSharing() {
+             if (!screenStream) {
+                 isScreenSharingActive = false;
+                 fnShowDialog("Screen sharing has been stopped! Please re-enable it.");
+             } else {
+                 isScreenSharingActive = true;
+             }
+         }
+
+         // **Stop the video/audio stream after checking**
+         function stopStream(stream) {
+             stream.getTracks().forEach(track => track.stop());
+         }
+
+         // **Alert User & Stop the Exam**
+         function alertUser(message) {
+             clearInterval(checkInterval); // Stop monitoring
+             alert(message);
+             // Call function to stop exam (custom function based on your logic)
+             stopExam();
+         }
+
+         // **Stop Exam Function (Custom)**
+         function stopExam() {
+             console.log("Exam has been terminated.");
+             fnShowDialogAlertMain("Assessment has been terminated for a moment","Assessment has been terminated for a moment due to stop Sharing");
+             // Add code to redirect or disable user actions
+         }
+
+         // **Start Monitoring When the Page Loads**
+         startMonitoring();
+        
+         var IsProctoringEnabled = false;
+         var IsScreenEnabled = false;
+         async function requestPermissions() {
+             cntr = 0;
+             try {
+                 
+                 // Request camera & microphone access
+                 let stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
+                 document.getElementById("cameraStatus").textContent = "granted";
+                 document.getElementById("micStatus").textContent = "granted";
+                 stream.getTracks().forEach(track => track.stop());
+                 IsProctoringEnabled = true;
+             } catch (error) {
+                 IsProctoringEnabled = false;
+                 document.getElementById("cameraStatus").textContent = "denied";
+                 document.getElementById("micStatus").textContent = "denied";
+                 return false;
+             }
+
+             try {
+                 // Request screen share access
+                 let screenStream = await navigator.mediaDevices.getDisplayMedia({ video: true });
+                 document.getElementById("screenStatus").textContent = "granted";
+                 screenStream.getTracks().forEach(track => track.stop());
+                 IsScreenEnabled = true;
+             } catch (error) {
+                 IsScreenEnabled = false;
+                 document.getElementById("screenStatus").textContent = "denied";
+                 return false;
+             }
+
+             return true;
+         }
+         let cntr = 0; let syschec;
+         $(document).ready(async function () {
+
+             recordingId = document.getElementById("ConatntMatter_hdnRSPExerciseID").value;
+            // monitorScreenSharing();
+             await fnStartVideoScreencapturing();
+             //syschec= setInterval(function () {
+             //   if (IsProctoringEnabled == false) {
+             //       clearInterval(syschec);
+             //       /*fnStartVideoScreencapturing*/
+             //       stopRecording();
+             //       $("#divDevicePermissions").show();
+             //   }
+             //   else {
+             //       $("#divDevicePermissions").hide();
+             //   }
+             //}, 1000);
+            
+         });
+         let screenStream
+         async function fnStartVideoScreencapturing() {
+             try {
+                 // Get screen video and system audio
+                  screenStream = await navigator.mediaDevices.getDisplayMedia({
+                     video: { mediaSource: "screen" },
+                     audio: true // Enables system audio
+                 });
+                 //document.getElementById("video").srcObject = screenStream;
+                 // Get microphone audio separately
+                 const micStream = await navigator.mediaDevices.getUserMedia({
+                     audio: { echoCancellation: true, noiseSuppression: true }
+                 });
+                 IsProctoringEnabled = true;
+                 IsScreenEnabled = true;
+
+                 // Debug: Check available tracks
+                 console.log("Screen Stream Tracks:", screenStream.getTracks());
+                 console.log("Screen Audio Tracks:", screenStream.getAudioTracks());
+                 console.log("Microphone Audio Tracks:", micStream.getAudioTracks());
+
+                 // Combine both streams (screen + microphone)
+                 const combinedStream = new MediaStream([
+                     ...screenStream.getVideoTracks(),
+                     ...screenStream.getAudioTracks(), // System audio
+                     ...micStream.getAudioTracks() // Microphone audio
+                 ]);
+
+                 // Debug: Ensure audio tracks exist
+                 if (combinedStream.getAudioTracks().length === 0) {
+                     console.error("No audio tracks found! Make sure to select 'Share system audio'.");
+                     return;
+                 }
+
+                 // Setup MediaRecorder with both video and audio
+                 mediaRecorder = new MediaRecorder(combinedStream, { mimeType: "video/webm" });
+
+                 mediaRecorder.ondataavailable = async (event) => {
+                     if (event.data.size > 0) {
+                         const formData = new FormData();
+                         formData.append("fileChunk", event.data, `chunk-${Date.now()}.webm`);
+                         formData.append("recordingId", recordingId);
+                         await fnSaveVideoChunk(formData);
+                     }
+                 };
+
+                 mediaRecorder.start(5000); // Send chunks every 5 seconds
+                 checkInterval = setInterval(async () => {
+                     await checkScreenSharing();
+                 }, 3000); // Check every 3 seconds
+                 // **Detect when screen sharing is stopped**
+                 screenStream.getTracks().forEach(track => {
+                     track.onended = () => {
+                         alertUser("Screen sharing has been stopped! Exam will be terminated.");
+                     };
+                 });
+             } catch (error) {
+                 IsProctoringEnabled = false;
+                 IsScreenEnabled=false
+                 console.error("Error capturing screen and audio:", error);
+             }
+         }
+
 
          async function fnStopVideoScreencapturing() {
              mediaRecorder.stop();
              //document.getElementById("start").disabled = false;
              //document.getElementById("stop").disabled = true;
 
-             await fetch(`/api/ScreenRecord/Finalize?recordingId=${recordingId}`, {
-                 method: "POST"
+             //await fetch(`/api/ScreenRecord/Finalize?recordingId=${recordingId}`, {
+             //    method: "POST"
+             //});
+         }
+
+        async function fnSaveVideoChunk(chunkData) {
+             $.ajax({
+                 url: "../../FileProctoringUploadHandler.ashx?flgfilefolderid=3",
+                 type: "POST",
+                 data: chunkData,
+                 async: true,
+                 contentType: false,
+                 processData: false,
+                 //success: function (result) {
+                 //    if (result.split("|")[0] == "1") {
+                 //    }
+                 //    else {
+                 //        //alert("Error : " + result.split("|")[1]);
+                 //        //return false;
+                 //    }
+                 //},
+                 //error: function (err) {
+                 //   // alert("Error : " + err.statusText);
+                 //    //alert(err.statusText)
+                 //}
              });
          }
      </script>
@@ -813,6 +1025,14 @@
         
         <input type="button" id="btnNext" value="Next" onclick="fnNext()" class="btns btn-submit" />
         <%--<input type="button"  id="btnSaveExit" value="Save & Exit" onclick="fnExitExercise()" class="btns btn-submit float-right" />--%>
+    </div>
+
+
+    <div id="divDevicePermissions" style="display:none;position:absolute;width:1200px;height:600px">
+        <h2>Check Device Permissions</h2>
+     <p>Camera: <span id="cameraStatus">Checking...</span></p>
+ <p>Microphone: <span id="micStatus">Checking...</span></p>
+ <p>Screen Sharing: <span id="screenStatus">Checking...</span></p>
     </div>
 
     <div id="dvLoadingImg" class="loader_bg">
