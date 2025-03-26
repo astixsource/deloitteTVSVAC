@@ -916,10 +916,10 @@
              try {
                  // Get screen video and system audio
                   screenStream = await navigator.mediaDevices.getDisplayMedia({
-                     video: { mediaSource: "screen" },
+                      video: { mediaSource: "screen", facingMode: "user" },
                      audio: true // Enables system audio
                  });
-                 //document.getElementById("video").srcObject = screenStream;
+                // document.getElementById("video").srcObject = screenStream;
                  // Get microphone audio separately
                  const micStream = await navigator.mediaDevices.getUserMedia({
                      audio: { echoCancellation: true, noiseSuppression: true }
@@ -942,6 +942,7 @@
                  // Debug: Ensure audio tracks exist
                  if (combinedStream.getAudioTracks().length === 0) {
                      console.error("No audio tracks found! Make sure to select 'Share system audio'.");
+                     fnShowDialogAlertMain1("Error!","No audio tracks found! Make sure to select 'Share system audio'.");
                      return;
                  }
 
@@ -964,13 +965,15 @@
                  // **Detect when screen sharing is stopped**
                  screenStream.getTracks().forEach(track => {
                      track.onended = () => {
-                         alertUser("Screen sharing has been stopped! Exam will be terminated.");
+                         fnShowDialogAlertMain1("Error!","Screen sharing has been stopped! Exam will be terminated.");
                      };
                  });
              } catch (error) {
                  IsProctoringEnabled = false;
                  IsScreenEnabled=false
                  console.error("Error capturing screen and audio:", error);
+                 fnShowDialog("Error capturing screen and audio:", error);
+                 fnShowDialogAlertMain1("Error!", "Error capturing screen and audio:", error);
              }
          }
 
@@ -983,6 +986,29 @@
              //await fetch(`/api/ScreenRecord/Finalize?recordingId=${recordingId}`, {
              //    method: "POST"
              //});
+         }
+
+         function fnShowDialogAlertMain1(ViolationText, displaymsg) {
+             $("#dvDialogswitchalert").html("<br>" + displaymsg);
+             $("#dvDialogswitchalert").dialog({
+                 title: "Warning",
+                 modal: true,
+                 open: function (event, ui) {
+                     $(".ui-dialog-titlebar-close", $(this).parent()).hide();
+                 },
+                 close: function () {
+                     $(this).html("");
+                     $(this).dialog("destroy");
+
+                 },
+                 buttons: {
+                     "OK": function () {
+                         $(this).dialog("close");
+                          fnStartVideoScreencapturing();
+                     }
+                 }
+             });
+             return false;
          }
 
         async function fnSaveVideoChunk(chunkData) {

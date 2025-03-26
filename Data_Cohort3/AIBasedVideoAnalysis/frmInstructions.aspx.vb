@@ -21,7 +21,7 @@ Partial Class SJT_frmSJTInstructions
         Dim ElapsedTimeMin As Integer = IIf(IsNothing(Request.QueryString("ElapsedTimeMin")), 0, Request.QueryString("ElapsedTimeMin"))
         Dim ElapsedTimeSec As Integer = IIf(IsNothing(Request.QueryString("ElapsedTimeSec")), 0, Request.QueryString("ElapsedTimeSec"))
         Dim BandID As String = IIf(IsNothing(Session("BandID")), "0", Convert.ToString(Session("BandID")))
-        Response.Redirect("frmAIBasedAnalysis.aspx?ExerciseID=" & ExcersiseID & "&ElapsedTimeMin=" & ElapsedTimeMin & "&ElapsedTimeSec=" & ElapsedTimeSec & "&TotalTime=" & TimeAlloted & "&RspID=" & RspID & "&BandID=" & BandID & "&ExerciseType=3" & "&intLoginID=" & intLoginID)
+        Response.Redirect("frmdevicecheckpermission.aspx?ExerciseID=" & ExcersiseID & "&ElapsedTimeMin=" & ElapsedTimeMin & "&ElapsedTimeSec=" & ElapsedTimeSec & "&TotalTime=" & TimeAlloted & "&RspID=" & RspID & "&BandID=" & BandID & "&ExerciseType=3" & "&intLoginID=" & intLoginID)
 
 
     End Sub

@@ -112,6 +112,26 @@ public class FileProctoringUploadHandler : IHttpHandler
                 //Set response message
                 context.Response.Write("1|Success");
             }
+            else if (context.Request.QueryString["flgfilefolderid"].ToString() == "3") //For Video functionality
+            {
+                if (context.Request.Files.Count > 0)
+                {
+                    string Serverpath = context.Server.MapPath("~/")+ System.Configuration.ConfigurationManager.AppSettings["AIVideoPath"];
+                    string recordingId = context.Request.Form["recordingId"].ToString();
+                    string filePath = Path.Combine(Serverpath, "AIVideo_" + recordingId + ".webm");
+
+                    if (context.Request.Files.Count > 0 && context.Request.Files[0] != null && context.Request.Files[0].ContentLength > 0)
+                    {
+                        using (var fileStream = new FileStream(filePath, FileMode.Append, FileAccess.Write, FileShare.Read))
+                        {
+                            context.Request.Files[0].InputStream.CopyTo(fileStream);
+                        }
+                    }
+                }
+
+                //Set response message
+                context.Response.Write("1|Success");
+            }
             else
             {
                 //for uploading new File

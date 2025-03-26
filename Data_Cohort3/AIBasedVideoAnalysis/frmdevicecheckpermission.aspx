@@ -82,7 +82,7 @@
          <h2>Check Device Permissions</h2>
     <p>Camera: <span id="cameraStatus">Checking...</span></p>
     <p>Microphone: <span id="micStatus">Checking...</span></p>
-    <p>Screen Sharing: <span id="screenStatus">Checking...</span></p>
+   <%-- <p>Screen Sharing: <span id="screenStatus">Checking...</span></p>--%>
      </div>
       <asp:HiddenField ID="hdnIsProctoringEnabled" runat="server" Value="0" />
     <div class="text-center">
